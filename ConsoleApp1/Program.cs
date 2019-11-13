@@ -1,12 +1,54 @@
 ﻿using Raylib;
 using rl = Raylib.Raylib;
+using static Raylib.Raylib;
+using System;
+using System.Diagnostics;
 
 namespace ConsoleApp1
 {
     static class Program
     {
+       // static void Main(string[] args)
+       // {
+       //     Game game = new Game();
+       //     Timer gameTime = new Timer();
+
+       //     InitWindow(640, 480, "Tanks for Everything!");
+
+       //     game.Init();
+
+       //     while (!WindowShouldClose())
+       //     {
+       //         game.Update();
+       //         game.Draw();
+       //     }
+
+
+       //     game.Shutdown();
+
+       //     CloseWindow();
+       // }
+
         public static int Main()
         {
+            Game game = new Game();
+            Timer gameTime = new Timer();
+
+            InitWindow(640, 480, "Tanks for Everything!");
+
+            game.Init();
+
+            while (!WindowShouldClose())
+            {
+                game.Update();
+                game.Draw();
+            }
+
+
+            game.Shutdown();
+
+            CloseWindow();
+
             // Initialization
             //--------------------------------------------------------------------------------------
             int screenWidth = 800;
